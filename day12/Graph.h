@@ -95,9 +95,9 @@ public:
         }
       }
     }
-  unsigned size = paths.size();
-  for( unsigned i = 0; i < size; ++i ) pathsFinal.insert( paths[i] );
-  paths.assign( pathsFinal.begin(), pathsFinal.end() );
+    unsigned size = paths.size();
+    for( unsigned i = 0; i < size; ++i ) pathsFinal.insert( paths[i] );
+    paths.assign( pathsFinal.begin(), pathsFinal.end() );
   }
   void findAllPathsUtilPartA(Vertex* curr,std::vector<std::vector<std::string>> &paths, std::vector<std::string> currentPath){
     currentPath.push_back(curr->getName());

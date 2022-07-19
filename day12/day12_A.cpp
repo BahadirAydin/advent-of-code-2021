@@ -15,7 +15,7 @@ int findAllPaths(std::string inputFileName){
     graph.addEdge(vertices[1],vertices[0]);
   }
   graph.findAllPaths('A'); // Call with 'A' for part A, 'B' for part B.
-  graph.showPaths();
+  //graph.showPaths();
 
   return graph.getPaths().size();
 }

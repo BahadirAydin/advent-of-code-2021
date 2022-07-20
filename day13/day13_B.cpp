@@ -47,7 +47,7 @@ void fold(std::string inputFileName){
       if(pair.first > max) max = pair.first;
       if(pair.second > max) max = pair.second;
     }
-    if(location == 6){ // Last input. Hardcoded. Does not necessary.
+    if(location == 6){ // Last input. Hardcoded. It is not necessary to do that way. It prevents unnecessary prints.
       for(int i = 0; i< max+1; i++){ 
         for(int j=0; j<max+1;j++){
           if(std::find(result.begin(),result.end(),std::pair<int,int>(j,i)) != result.end())

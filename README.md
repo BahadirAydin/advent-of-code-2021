@@ -5,4 +5,6 @@
 **C++ Version**: C++20 \
 **Flags used when compiling**: -Wall \
 \
-Example Compilation: g++ -Wall -o day01_A day01_A.cpp
+Example Compilation: g++ -Wall -o day01_A day01_A.cpp \
+
+Problems can be found on: https://adventofcode.com/2021

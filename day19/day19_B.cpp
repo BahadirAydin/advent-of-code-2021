@@ -116,15 +116,14 @@ int scanner(){
   std::vector<vectorOfTriplets> allScanners = getScannerDatas("input.txt");
   vectorOfTriplets offsets;
   std::queue<int> queue;
-  std::vector<std::pair<int,int>> allCombs;
-  int size = allScanners.size();
   int i=0;
-  while(allCombs.size() < size*(size-1)/2){
+  queue.push(0);
+  while(!queue.empty()){
+    i=queue.front();
+    queue.pop();
     for(int j=0;j<allScanners.size();j++){
       if(j==i)
         j++;
-      if(std::find(allCombs.begin(),allCombs.end(),std::make_pair(i,j))== allCombs.end() && std::find(allCombs.begin(),allCombs.end(),std::make_pair(j,i))==allCombs.end())
-        allCombs.push_back(std::make_pair(i,j));
       if(i==0){
         triplet offset = findOffset(allScanners[0],allScanners[j]);
         if(offset != std::make_tuple(1500,1500,1500) && offset != std::make_tuple(0,0,0)){
@@ -140,9 +139,6 @@ int scanner(){
         }
       }
     }
-    i=queue.front();
-    if(!queue.empty())
-      queue.pop();
   }
   int maxDistanceApart=0;
   for(int i=0;i<offsets.size()-1;i++){

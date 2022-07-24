@@ -1,11 +1,10 @@
 #include <fstream> 
 #include <algorithm>
 #include "inputsToVector.h"
-#include <set>
 #include <queue>
 typedef std::tuple<int,int,int> triplet;
 typedef std::vector<triplet> vectorOfTriplets;
-//THIS WAS THE HARDEST DAY FOR ME SO FAR BY A HUGE MARGIN. SOLUTION IS BRUTE FORCE IT TAKES SOME TIME BUT IT WORKS AS EXPECTED.
+//THIS WAS THE HARDEST DAY FOR ME SO FAR BY A HUGE MARGIN. SOLUTION IS BRUTE FORCE IT TAKES SOME TIME (~5 mins) BUT IT WORKS AS EXPECTED.
 //I WILL NOT TRY TO MAKE IMPROVEMENTS ON THIS SOLUTION BECAUSE I HATED THE QUESTION :)
 
 std::vector<vectorOfTriplets> getScannerDatas(std::string inputFileName){
@@ -112,17 +111,7 @@ triplet findOffset(const vectorOfTriplets &v1,vectorOfTriplets &v2){
   }
   return offset;
 }
-vectorOfTriplets commonBeacons(const vectorOfTriplets &v1, const vectorOfTriplets &v2,const triplet &offset){
-  vectorOfTriplets commonBeacons;
-  if(offset == std::make_tuple(1500,1500,1500))
-    return commonBeacons;
-  for(triplet t : v2){
-    if(std::find(v1.begin(),v1.end(),t) != v1.end()){
-      commonBeacons.push_back(t);
-    }
-  }
-  return commonBeacons;
-}
+
 
 int scanner(){
   std::vector<vectorOfTriplets> allScanners = getScannerDatas("input.txt");
@@ -145,7 +134,6 @@ int scanner(){
           offsets.push_back(offset);
           queue.push(j);
         }
-        commonBeacons(allScanners[0],allScanners[j],offset);
       }
       else{
         triplet offset = findOffset(allScanners[i],allScanners[j]);
@@ -153,7 +141,6 @@ int scanner(){
           offsets.push_back(offset);
           queue.push(j);
         }
-        commonBeacons(allScanners[i],allScanners[j],offset);
       }
     }
     i=queue.front();

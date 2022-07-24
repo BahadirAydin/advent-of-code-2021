@@ -1,11 +1,10 @@
 #include <fstream> 
 #include <algorithm>
 #include "inputsToVector.h"
-#include <set>
 #include <queue>
 typedef std::tuple<int,int,int> triplet;
 typedef std::vector<triplet> vectorOfTriplets;
-//THIS WAS THE HARDEST DAY FOR ME SO FAR BY A HUGE MARGIN. SOLUTION IS BRUTE FORCE IT TAKES SOME TIME BUT IT WORKS AS EXPECTED.
+//THIS WAS THE HARDEST DAY FOR ME SO FAR BY A HUGE MARGIN. SOLUTION IS BRUTE FORCE IT TAKES SOME TIME (~5 mins) BUT IT WORKS AS EXPECTED.
 //I WILL NOT TRY TO MAKE IMPROVEMENTS ON THIS SOLUTION BECAUSE I HATED THE QUESTION :)
 
 std::vector<vectorOfTriplets> getScannerDatas(std::string inputFileName){

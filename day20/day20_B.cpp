@@ -63,7 +63,7 @@ doubleVec createImage(std::ifstream &input){
 
   return result;
 }
-int isLit(const doubleVec &area,const std::string conversionStr){
+bool isLit(const doubleVec &area,const std::string conversionStr){
 
   int result=0;
   int exp = 8;
@@ -74,8 +74,8 @@ int isLit(const doubleVec &area,const std::string conversionStr){
     }
   }
   if(conversionStr[result] == '#')
-    return 1;
-  return 0;
+    return LIGHT;
+  return DARK;
 }
 doubleVec createOutputImage(doubleVec &image,const std::string &conversionStr,int step){
   doubleVec result;

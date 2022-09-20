@@ -1,0 +1,7 @@
+#############
+#...........#
+###D#D#A#A###
+  #C#C#B#B#
+  #########
+
+THE INPUTS ARE HARDCODED IN THE ALGORITHM. THIS FILE IS ONLY FOR VISUAL PURPOSES

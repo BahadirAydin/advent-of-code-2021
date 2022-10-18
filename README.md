@@ -5,8 +5,8 @@
 **C++ Version**: C++20 \
 **Flags used when compiling**: -Wall \
 \
-Example Compilation: g++ -Wall -o day01_A day01_A.cpp \
+Example Compilation: g++ -Wall -o day01_A day01_A.cpp 
 
-I have written all the code, but for a few of the questions that I got stuck I read the advices/discussions/articles of the great hacker community to get an idea. I have given credit where needed. \ 
+I have written all the code, but for a few of the questions that I got stuck I read the advices/discussions/articles of the great hacker community to get an idea. I have given credit where needed. 
 
 Problems can be found on: https://adventofcode.com/2021
